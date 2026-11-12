@@ -1,0 +1,8 @@
+{
+  "appId": "com.rxtritik.pulseorange",
+  "appName": "PulseOrange",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
