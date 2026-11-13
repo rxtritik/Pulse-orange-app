@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#241206"/>
+      <stop offset="100%" stop-color="#09090c"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffa84c"/>
+      <stop offset="50%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#cc4400"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- Subtle Studio Rings -->
+  <circle cx="512" cy="512" r="320" fill="none" stroke="#ff6b00" stroke-opacity="0.14" stroke-width="4"/>
+  <circle cx="512" cy="512" r="245" fill="none" stroke="#ff6b00" stroke-opacity="0.22" stroke-width="3"/>
+
+  <!-- Glowing Pulse Waveform -->
+  <polyline points="200,512 290,512 330,410 375,620 420,330 465,680 512,512 560,360 605,650 650,420 690,512 824,512"
+            fill="none" stroke="url(#neon)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Center Play Emblem -->
+  <circle cx="512" cy="512" r="145" fill="#0d0d12" stroke="url(#neon)" stroke-width="14" filter="url(#glow)"/>
+  <polygon points="472,438 472,586 592,512" fill="url(#neon)"/>
+</svg>
